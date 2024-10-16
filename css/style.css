@@ -118,9 +118,15 @@ header {
   margin-right: 3px;
 }
 
+.main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
 #left-column {
   display: flex;
-  width: 30%;
+  min-width: 30%;
   height: 1000px;
   background-color: #e3e3e3;
   margin: 0;
@@ -179,7 +185,7 @@ header {
 }
 
 .pays {
-  margin-right: 91px;
+  margin-right: 100px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
@@ -215,4 +221,89 @@ li {
 
 li:first-line {
   color: black;
+}
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#main-content h3 {
+  border-bottom: 1px solid;
+  border-color: #33333318;
+  padding-bottom: 15px;
+  margin: 0;
+  padding-top: 15px;
+}
+
+.paragraphe {
+  display: flex;
+  flex-wrap: wrap;
+  text-indent: 3%;
+  text-align: justify;
+}
+
+.professionnel {
+  display: flex;
+  margin-top: 5%;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.formations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: 14px;
+}
+
+.formations p {
+  margin-bottom: 5%;
+  margin-top: 0;
+}
+
+.titre {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.sous-titres {
+  font-size: 0.75rem;
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+}
+
+.dates {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  color: #17abb3;
+  width: 230px;
+}
+
+.dates p {
+  margin: 0;
+  text-align: right;
+}
+
+.stages {
+  display: flex;
+  margin-top: 5%;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.exp {
+  display: flex;
+  margin-top: 5%;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
