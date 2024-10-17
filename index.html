@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="MON CV" />
+    <meta name="description" content="MON CV - Devoir CEF" />
     <meta name="robots" content="index" />
     <link rel="stylesheet" href="/css/style.css " />
     <script
@@ -17,24 +17,29 @@
       type="image/png"
       href="/assets/Favicon/icons8-cv-color-hand-drawn-32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>CV BOETTO JEAN-VINCENT</title>
   </head>
   <!-- le cv se divisera en 4 parties distinctes : le header / la collone de gauche / le corp centrale / le footer -->
   <body>
     <!-- 1ere partie : header -->
     <header>
-      <div id="photo">
+      <div id="header_photo">
         <a href="assets/photos/JVB-PROFIL.jpg" target="_blank">
           <img src="/assets/photos/JVB-PROFIL.jpg" alt="Jean-Vincent Boetto"
         /></a>
       </div>
-      <div id="personal-information">
-        <div id="nom">
-          <!-- le h1 ici serait justifié du fait qu'il sagisse de mon cv -->
+      <section id="header_information">
+        <div id="header_information_nom">
           <h1>Jean-Vincent Boetto</h1>
           <h2>Développeur Web et Web Mobile</h2>
         </div>
-        <div id="icones">
+        <div id="header_information_icones">
           <p>
             <a href="mailto:jvboetto@gmail.com" target="_blank"
               ><span class="fa-solid fa-envelope"></span> <span>Mail</span></a
@@ -57,166 +62,153 @@
             <span>Permis B</span>
           </p>
         </div>
-      </div>
+      </section>
     </header>
     <main>
-      <div class="main">
-        <!-- 2nde partie : collone de gauche -->
-        <div id="left-column">
-          <h3>Compétences</h3>
-          <div class="compétences">
-            <div class="skills">
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>Javascript</p>
-              <p>PHP</p>
-            </div>
-            <div class="stars">
-              <!-- html -->
-              <div>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-              </div>
-              <!-- CSS -->
-              <div>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-              </div>
-              <!-- n'ayant aucune notion de javascript j'ai retrancris le modéle -->
-              <div>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-              </div>
-              <!-- idem pour le php -->
-              <div>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-              </div>
-            </div>
-          </div>
-          <h3>Langues</h3>
-          <div class="langues">
-            <div class="pays">
-              <p>Français</p>
-              <p>Anglais</p>
-              <p>Espagnol</p>
-            </div>
-            <div class="level">
-              <p>Langue maternelle</p>
-              <p>Couramment</p>
-              <p>Notions</p>
-            </div>
-          </div>
-          <h3>Qualités</h3>
-          <div class="qualités">
-            <ul>
-              <li>Esprit d'équipe</li>
-              <li>Autonomie</li>
-              <li>Organisation</li>
-              <li>Créativité</li>
-            </ul>
-          </div>
-          <h3>Centre d'intéret</h3>
-          <div class="qualités">
-            <ul>
-              <li>Musique</li>
-              <li>Sport</li>
-              <li>Informatique</li>
-            </ul>
-          </div>
+      <!-- 2nde partie : collone de gauche -->
+      <section id="left_column">
+        <h3>Compétences</h3>
+        <div id="left_column_compétences">
+          <h4>HTML</h4>
+          <p>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </p>
+          <h4>CSS</h4>
+          <p>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </p>
+          <h4>Javascript</h4>
+          <p>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </p>
+          <h4>PHP</h4>
+          <p>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </p>
         </div>
-        <!-- 3eme partie le corps centrale -->
-        <div id="main-content">
-          <div id="paragraphe">
-            <h3>Profil</h3>
-            <p>
-              Cadre d'exploitation dans le domaine du transports routier, j'ai
-              obtenu mon attestation de capacité transport en 2006. Fort d'une
-              expérience de plus de 20 ans dans ce domaine, j'ai acquis mes
-              connaissances à travers les différents postes occupés comme celui
-              de responsable de quais, responsable de parc, assistant
-              secrétariat, responsable de tournées.
-            </p>
-            <p>
-              Devant l'opportunité d'engager une reconversion professionnelle,
-              j'ai choisis le secteur du numérique, ayant toujours été passionné
-              par l'informatique, internet et les nouvelles technologies.
-            </p>
-          </div>
-
-          <div class="formations">
-            <h3>Formations</h3>
-            <p>
-              <span class="titre">Titre Professionnel DWWM</span
-              ><span class="dates">2024/2025</span><br /><span
-                class="sous-titres"
-                >Centre Européen de Formation</span
-              >
-            </p>
-            <p>
-              <span class="titre">BTS transports</span
-              ><span class="dates">Septembre 2004 - Juillet 2006</span
-              ><br /><span class="sous-titres">EFC SUD, Vitrolles</span>
-            </p>
-            <p>
-              <span class="titre">Baccalauréat STT</span
-              ><span class="dates">2000</span><br /><span class="sous-titres"
-                >Lycée George Duby, Luynes</span
-              >
-            </p>
-          </div>
-
-          <div class="formations">
-            <h3>Stages</h3>
-            <p>
-              <span class="titre">Agent de quais</span
-              ><span class="dates">Mars 2002 - Avril 2002</span><br />
-              <span class="sous-titres">Sarl Boetto</span>
-            </p>
-            <p>
-              <span class="titre">Aide au personel roulant</span
-              ><span class="dates">Janvier 2001 - Fevrier 2001</span><br />
-              <span class="sous-titres">Sarl Besson</span>
-            </p>
-          </div>
-
-          <div class="formations">
-            <h3>Expérience professionnelle</h3>
-            <p>
-              <span class="titre">Cadre d'exploitation</span
-              ><span class="dates">Octobre 2006 - Fevrier 2024</span><br />
-              <span class="sous-titres">Sarl Boetto</span>
-            </p>
-            <p>
-              <span class="titre">Secrétariat et gestion de parc</span
-              ><span class="dates">Aout 2004 - Septembre 2006</span><br />
-              <span class="sous-titres">Sarl Boetto</span>
-            </p>
-            <p>
-              <span class="titre">Responsable de quais</span
-              ><span class="dates">Aout 2002 - Juillet 2004</span><br />
-              <span class="sous-titres">Sarl Boetto</span>
-            </p>
-          </div>
+        <h3>Langues</h3>
+        <div id="left_column_langues">
+          <h4>Français</h4>
+          <p>Langue maternelle</p>
+          <h4>Anglais</h4>
+          <p>Couramment</p>
+          <h4>Espagnol</h4>
+          <p>Notions</p>
         </div>
-      </div>
+
+        <h3>Qualités</h3>
+        <div class="left_column_qualités">
+          <ul>
+            <li>Esprit d'équipe</li>
+            <li>Autonomie</li>
+            <li>Organisation</li>
+            <li>Créativité</li>
+          </ul>
+        </div>
+        <h3>Centre d'intéret</h3>
+        <div class="left_column_qualités">
+          <ul>
+            <li>Musique</li>
+            <li>Sport</li>
+            <li>Informatique</li>
+          </ul>
+        </div>
+      </section>
+      <!-- 3eme partie le corps centrale -->
+      <section id="main_content">
+        <h3>Profil</h3>
+        <div id="main_content_profil">
+          <p>
+            Cadre d'exploitation dans le domaine du transports routier, j'ai
+            obtenu mon attestation de capacité transport en 2006. Fort d'une
+            expérience de plus de 20 ans dans ce domaine, j'ai acquis mes
+            connaissances à travers les différents postes occupés comme celui de
+            responsable de quais, responsable de parc, assistant secrétariat,
+            responsable de tournées.
+          </p>
+          <p>
+            Devant l'opportunité d'engager une reconversion professionnelle,
+            j'ai choisis le secteur du numérique, ayant toujours été passionné
+            par l'informatique, internet et les nouvelles technologies.
+          </p>
+        </div>
+        <h3>Formations</h3>
+        <div class="main_content_formations">
+          <p>
+            <span class="titres">Titre Professionnel DWWM</span>
+            <span class="dates">2024/2025</span>
+            <span class="sous-titres"
+              ><small>Centre Européen de Formation</small></span
+            >
+          </p>
+
+          <p>
+            <span class="titres">BTS Transport</span>
+            <span class="dates">Septembre 2004 - Juillet 2006</span>
+            <span class="sous-titres"><small>ECF SUD, Vitrolles</small></span>
+          </p>
+          <p>
+            <span class="titres">Bacalauréat</span>
+            <span class="dates">2000</span>
+            <span class="sous-titres"
+              ><small>Lycée Georges Duby, Luynes</small></span
+            >
+          </p>
+        </div>
+        <h3>Stages</h3>
+        <div class="main_content_formations">
+          <p>
+            <span class="titres">Agent de quais</span
+            ><span class="dates">Mars 2002 - Avril 2002</span>
+            <span class="sous-titres"><small>Sarl Boetto</small></span>
+          </p>
+          <p>
+            <span class="titres">Aide au personel roulant</span
+            ><span class="dates">Janvier 2001 - Fevrier 2001</span>
+            <span class="sous-titres"><small>Sarl Besson</small></span>
+          </p>
+        </div>
+
+        <h3>Expérience professionnelle</h3>
+        <div class="main_content_formations">
+          <p>
+            <span class="titres">Cadre d'exploitation</span
+            ><span class="dates">Octobre 2006 - Fevrier 2024</span>
+            <span class="sous-titres"><small>Sarl Boetto</small></span>
+          </p>
+          <p>
+            <span class="titres">Secrétariat et gestion de parc</span
+            ><span class="dates">Aout 2004 - Septembre 2006</span>
+            <span class="sous-titres"><small>Sarl Boetto</small></span>
+          </p>
+          <p>
+            <span class="titres">Responsable de quais</span
+            ><span class="dates">Aout 2002 - Juillet 2004</span>
+            <span class="sous-titres"><small>Sarl Boetto</small></span>
+          </p>
+        </div>
+      </section>
     </main>
     <!-- derniere partie : le footer -->
     <footer>
       <!-- je n'ai volontairement pas linké les réseaux sociaux likedin et insta n'ayant pas de compte linkedin et mon compte instagram étant privé -->
-      <div id="footer-link">
+      <div id="footer_link">
         <p>
           <i class="fi fi-brands-linkedin"></i>
         </p>
@@ -229,8 +221,13 @@
           <i class="fi fi-brands-instagram"></i>
         </p>
       </div>
-      <div id="update">
-        <p>Mis à jour le : 17/10/2024</p>
+      <div id="footer_update">
+        <p>
+          <small
+            >Mis à jour le :
+            <time datetime="2024-10-17">17-10-2024</time></small
+          >
+        </p>
       </div>
     </footer>
   </body>
