@@ -50,12 +50,16 @@ header {
 }
 
 #photo img {
-  width: 100px;
-  height: 100px;
+  width: 119px;
+  height: 119px;
   border: 4px solid;
   border-radius: 50%;
   border-color: #ffffff;
-  object-fit: fill;
+  object-fit: cover;
+}
+
+#photo:hover img {
+  cursor: zoom-in;
 }
 
 #personal-information {
@@ -361,5 +365,5 @@ footer {
 }
 
 #footer-link p :hover {
-  color: #ffffff4b;
+  opacity: 0.5;
 }
