@@ -114,7 +114,7 @@ header {
 }
 
 #icones p a:hover {
-  color: black;
+  color: yellow;
 }
 
 .adresse {
@@ -312,4 +312,54 @@ li:first-line {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+}
+
+/* mise en place du footer */
+
+footer {
+  width: 100%;
+  background-color: #17abb3;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#footer-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1rem;
+  height: 50%;
+  width: 15%;
+  justify-content: space-evenly;
+}
+
+#footer-link p {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+#footer-link a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#update {
+  display: flex;
+  align-items: flex-start;
+  color: #ffffff;
+  height: 50%;
+}
+
+#update p {
+  font-size: 0.7rem;
+  font-style: italic;
+  font-weight: lighter;
+  margin-top: 5px;
+}
+
+#footer-link p :hover {
+  color: #ffffff4b;
 }
