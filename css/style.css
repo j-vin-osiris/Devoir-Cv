@@ -1,3 +1,4 @@
+/* par mesure de sécurité j'ai souhaité télécharger les fonts plutot que de les importer depuis google font ou font face */
 @font-face {
   font-family: LATO;
   src: url(/assets/Font/Lato/Lato-Regular.ttf);
@@ -26,6 +27,7 @@ body {
   justify-content: center;
   margin: auto;
   background-color: #ffffff;
+  font-size: 1rem;
 }
 
 /* mise en place du header */
@@ -117,6 +119,7 @@ header {
   font-weight: lighter;
 }
 
+/* cette demande n'était pas précisé dans le devoir je l'ai rajouté pour dissocier le passage du curseur sur les liens */
 #icones p a:hover {
   color: yellow;
 }
@@ -135,13 +138,13 @@ header {
 
 #left-column {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   min-width: 30%;
   height: 1000px;
   background-color: #e3e3e3;
   margin: 0;
   padding: 0;
-  flex-direction: column;
-  align-items: center;
 }
 
 #left-column h3 {
@@ -156,7 +159,7 @@ header {
 .compétences {
   display: flex;
   flex-direction: row;
-  margin: 5% 5% 0 5%;
+  margin: 2% 5% 0 5%;
   width: 90%;
 }
 
@@ -189,7 +192,7 @@ header {
 .langues {
   display: flex;
   flex-direction: row;
-  margin: 5% 5% 0 5%;
+  margin: 0% 5% 0 5%;
   width: 90%;
 }
 
@@ -213,7 +216,7 @@ header {
 .qualités {
   display: flex;
   flex-direction: row;
-  margin: 5% 5% 0 5%;
+  margin: 0% 5% 0 5%;
   width: 90%;
 }
 
@@ -232,7 +235,7 @@ li:first-line {
   color: black;
 }
 
-/* Mise en place du corp principale du cv */
+/* Mise en place du corp centrale du cv */
 
 #main-content {
   display: flex;
@@ -247,35 +250,38 @@ li:first-line {
   padding-bottom: 15px;
   margin: 0;
   padding-top: 15px;
+  width: 100%;
 }
 
-.paragraphe {
-  display: flex;
-  flex-wrap: wrap;
-  text-indent: 3%;
+#paragraphe {
   text-align: justify;
+}
+
+#paragraphe p {
+  text-indent: 3%;
+  margin-top: 2%;
 }
 
 .professionnel {
   display: flex;
-  margin-top: 5%;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  margin-top: 5%;
 }
 
 .formations {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   line-height: 14px;
-  flex-wrap: wrap;
   width: 100%;
 }
 
 .formations p {
   margin-bottom: 2%;
-  margin-top: 0;
+  margin-top: 2%;
   padding: 5px 3px 5px 3px;
 }
 

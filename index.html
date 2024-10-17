@@ -10,25 +10,33 @@
       src="https://kit.fontawesome.com/d6fdc35641.js"
       crossorigin="anonymous"
     ></script>
-    <link href="/assets/logos/css/uicons-brands.css" rel="stylesheet">
+    <link href="/assets/logos/css/uicons-brands.css" rel="stylesheet" />
     <!-- n'ayant pas trouvé le favicon que vous nous demandiez d'utiliser je me suis permit d'en mettre un autre -->
-    <link rel="shortcut icon" type="image/png" href="/assets/Favicon/icons8-cv-color-hand-drawn-32.png"/>
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/assets/Favicon/icons8-cv-color-hand-drawn-32.png"
+    />
     <title>CV BOETTO JEAN-VINCENT</title>
   </head>
+  <!-- le cv se divisera en 4 parties distinctes : le header / la collone de gauche / le corp centrale / le footer -->
   <body>
+    <!-- 1ere partie : header -->
     <header>
       <div id="photo">
-        <a href="assets/photos/JVB - PROFIL.jpg" target="_blank">
-        <img src="/assets/photos/JVB - PROFIL.jpg" alt="Jean-Vincent Boetto" /></a>
+        <a href="assets/photos/JVB-PROFIL.jpg" target="_blank">
+          <img src="/assets/photos/JVB-PROFIL.jpg" alt="Jean-Vincent Boetto"
+        /></a>
       </div>
       <div id="personal-information">
         <div id="nom">
+          <!-- le h1 ici serait justifié du fait qu'il sagisse de mon cv -->
           <h1>Jean-Vincent Boetto</h1>
           <h2>Développeur Web et Web Mobile</h2>
         </div>
         <div id="icones">
           <p>
-            <a href="mailto: jvboetto@gmail.com" target="_blank"
+            <a href="mailto:jvboetto@gmail.com" target="_blank"
               ><span class="fa-solid fa-envelope"></span> <span>Mail</span></a
             >
           </p>
@@ -40,7 +48,7 @@
           </p>
           <p>
             <a href="tel:+33625244239">
-              <span class="fa-solid fa-phone" target="_blank"></span>
+              <span class="fa-solid fa-phone"></span>
               <span>Téléphone</span></a
             >
           </p>
@@ -53,6 +61,7 @@
     </header>
     <main>
       <div class="main">
+        <!-- 2nde partie : collone de gauche -->
         <div id="left-column">
           <h3>Compétences</h3>
           <div class="compétences">
@@ -63,6 +72,7 @@
               <p>PHP</p>
             </div>
             <div class="stars">
+              <!-- html -->
               <div>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -70,6 +80,7 @@
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-regular fa-star"></i>
               </div>
+              <!-- CSS -->
               <div>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -77,6 +88,7 @@
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-regular fa-star"></i>
               </div>
+              <!-- n'ayant aucune notion de javascript j'ai retrancris le modéle -->
               <div>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -84,6 +96,7 @@
                 <i class="fa-regular fa-star"></i>
                 <i class="fa-regular fa-star"></i>
               </div>
+              <!-- idem pour le php -->
               <div>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-regular fa-star"></i>
@@ -124,9 +137,10 @@
             </ul>
           </div>
         </div>
+        <!-- 3eme partie le corps centrale -->
         <div id="main-content">
-          <h3>Profil</h3>
-          <div class="paragraphe">
+          <div id="paragraphe">
+            <h3>Profil</h3>
             <p>
               Cadre d'exploitation dans le domaine du transports routier, j'ai
               obtenu mon attestation de capacité transport en 2006. Fort d'une
@@ -141,66 +155,75 @@
               par l'informatique, internet et les nouvelles technologies.
             </p>
           </div>
-          <h3>Formations</h3>
-          <section class="professionnel">
-          
+
           <div class="formations">
-            
+            <h3>Formations</h3>
             <p>
-              <span class="titre">Titre Professionnel DWWM</span><span class="dates">2024/2025</span><br /><span
+              <span class="titre">Titre Professionnel DWWM</span
+              ><span class="dates">2024/2025</span><br /><span
                 class="sous-titres"
                 >Centre Européen de Formation</span
               >
             </p>
             <p>
-              <span class="titre">BTS transports</span><span class="dates">Septembre 2004 - Juillet 2006</span><br /><span
-                class="sous-titres"
-                >EFC SUD, Vitrolles</span
-              
-              >
+              <span class="titre">BTS transports</span
+              ><span class="dates">Septembre 2004 - Juillet 2006</span
+              ><br /><span class="sous-titres">EFC SUD, Vitrolles</span>
             </p>
             <p>
-              <span class="titre">Baccalauréat STT</span><span class="dates">2000</span><br /><span
-                class="sous-titres"
+              <span class="titre">Baccalauréat STT</span
+              ><span class="dates">2000</span><br /><span class="sous-titres"
                 >Lycée George Duby, Luynes</span
               >
             </p>
-          
           </div>
-        </section>
-        
-          <h3>Stages</h3>
-          <section class="stages">
+
           <div class="formations">
-            <p><span class="titre">Agent de quais</span><span class="dates">Mars 2002 - Avril 2002</span><br>
-            <span class="sous-titres">Sarl Boetto</span></p>
-            <p><span class="titre">Aide au personel roulant</span><span class="dates">Janvier 2001 - Fevrier 2001</span><br>
-              <span class="sous-titres">Sarl Besson</span></p>
+            <h3>Stages</h3>
+            <p>
+              <span class="titre">Agent de quais</span
+              ><span class="dates">Mars 2002 - Avril 2002</span><br />
+              <span class="sous-titres">Sarl Boetto</span>
+            </p>
+            <p>
+              <span class="titre">Aide au personel roulant</span
+              ><span class="dates">Janvier 2001 - Fevrier 2001</span><br />
+              <span class="sous-titres">Sarl Besson</span>
+            </p>
           </div>
-        
-      </section>
-      <h3>Expérience professionnelle</h3>
-      <section class="exp">
-        <div class="formations">
-          <p><span class="titre">Cadre d'exploitation</span><span class="dates">Octobre 2006 - Fevrier 2024</span><br>
-          <span class="sous-titres">Sarl Boetto</span></p>
-          <p><span class="titre">Secrétariat et gestion de parc</span><span class="dates">Aout 2004 - Septembre 2006</span><br>
-            <span class="sous-titres">Sarl Boetto</span></p>
-            <p><span class="titre">Responsable de quais</span><span class="dates">Aout 2002 - Juillet 2004</span><br>
-              <span class="sous-titres">Sarl Boetto</span></p>
+
+          <div class="formations">
+            <h3>Expérience professionnelle</h3>
+            <p>
+              <span class="titre">Cadre d'exploitation</span
+              ><span class="dates">Octobre 2006 - Fevrier 2024</span><br />
+              <span class="sous-titres">Sarl Boetto</span>
+            </p>
+            <p>
+              <span class="titre">Secrétariat et gestion de parc</span
+              ><span class="dates">Aout 2004 - Septembre 2006</span><br />
+              <span class="sous-titres">Sarl Boetto</span>
+            </p>
+            <p>
+              <span class="titre">Responsable de quais</span
+              ><span class="dates">Aout 2002 - Juillet 2004</span><br />
+              <span class="sous-titres">Sarl Boetto</span>
+            </p>
+          </div>
         </div>
-      </section>
       </div>
     </main>
+    <!-- derniere partie : le footer -->
     <footer>
       <!-- je n'ai volontairement pas linké les réseaux sociaux likedin et insta n'ayant pas de compte linkedin et mon compte instagram étant privé -->
       <div id="footer-link">
         <p>
           <i class="fi fi-brands-linkedin"></i>
         </p>
-        <p><a href="https://github.com/j-vin-osiris/Devoir-Cv" target="_blank"
-          >
-          <i class="fi fi-brands-github"></i></a>
+        <p>
+          <a href="https://github.com/j-vin-osiris/Devoir-Cv" target="_blank">
+            <i class="fi fi-brands-github"></i
+          ></a>
         </p>
         <p>
           <i class="fi fi-brands-instagram"></i>
