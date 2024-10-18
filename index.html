@@ -29,17 +29,17 @@
   <body>
     <!-- 1ere partie : header -->
     <header>
-      <div id="header_photo">
+      <div id="header__photo">
         <a href="assets/photos/JVB-PROFIL.jpg" target="_blank">
           <img src="/assets/photos/JVB-PROFIL.jpg" alt="Jean-Vincent Boetto"
         /></a>
       </div>
-      <section id="header_information">
-        <div id="header_information_nom">
+      <section id="header__information">
+        <div id="header__information__nom">
           <h1>Jean-Vincent Boetto</h1>
           <h2>Développeur Web et Web Mobile</h2>
         </div>
-        <div id="header_information_icones">
+        <div id="header__information__icones">
           <p>
             <a href="mailto:jvboetto@gmail.com" target="_blank"
               ><span class="fa-solid fa-envelope"></span> <span>Mail</span></a
@@ -66,9 +66,9 @@
     </header>
     <main>
       <!-- 2nde partie : collone de gauche -->
-      <section id="left_column">
+      <section id="left__column">
         <h3>Compétences</h3>
-        <div id="left_column_compétences">
+        <div id="left__column__compétences">
           <h4>HTML</h4>
           <p>
             <i class="fa-solid fa-star"></i>
@@ -102,8 +102,9 @@
             <i class="fa-regular fa-star"></i>
           </p>
         </div>
+        <!-- j'utilise la mêm class pour "qualité" et "langues" car ils ont la même mise en forme -->
         <h3>Langues</h3>
-        <div id="left_column_langues">
+        <div id="left__column__langues">
           <h4>Français</h4>
           <p>Langue maternelle</p>
           <h4>Anglais</h4>
@@ -113,7 +114,7 @@
         </div>
 
         <h3>Qualités</h3>
-        <div class="left_column_qualités">
+        <div class="left__column__qualités">
           <ul>
             <li>Esprit d'équipe</li>
             <li>Autonomie</li>
@@ -122,7 +123,7 @@
           </ul>
         </div>
         <h3>Centre d'intéret</h3>
-        <div class="left_column_qualités">
+        <div class="left__column__qualités">
           <ul>
             <li>Musique</li>
             <li>Sport</li>
@@ -131,9 +132,9 @@
         </div>
       </section>
       <!-- 3eme partie le corps centrale -->
-      <section id="main_content">
+      <section id="main__content">
         <h3>Profil</h3>
-        <div id="main_content_profil">
+        <div id="main__content__profil">
           <p>
             Cadre d'exploitation dans le domaine du transports routier, j'ai
             obtenu mon attestation de capacité transport en 2006. Fort d'une
@@ -149,7 +150,8 @@
           </p>
         </div>
         <h3>Formations</h3>
-        <div class="main_content_formations">
+        <!-- concernant les parties du cv "formation" , "stage" et "expérience professionnelle" j'utilise des class identiques car ils ont tous la même mise en forme ce qui limitera le nombre de lignes css -->
+        <div class="main__content__formations">
           <p>
             <span class="titres">Titre Professionnel DWWM</span>
             <span class="dates">2024/2025</span>
@@ -171,8 +173,9 @@
             >
           </p>
         </div>
+
         <h3>Stages</h3>
-        <div class="main_content_formations">
+        <div class="main__content__formations">
           <p>
             <span class="titres">Agent de quais</span
             ><span class="dates">Mars 2002 - Avril 2002</span>
@@ -186,7 +189,7 @@
         </div>
 
         <h3>Expérience professionnelle</h3>
-        <div class="main_content_formations">
+        <div class="main__content__formations">
           <p>
             <span class="titres">Cadre d'exploitation</span
             ><span class="dates">Octobre 2006 - Fevrier 2024</span>
@@ -208,7 +211,7 @@
     <!-- derniere partie : le footer -->
     <footer>
       <!-- je n'ai volontairement pas linké les réseaux sociaux likedin et insta n'ayant pas de compte linkedin et mon compte instagram étant privé -->
-      <div id="footer_link">
+      <div id="footer__link">
         <p>
           <i class="fi fi-brands-linkedin"></i>
         </p>
@@ -221,7 +224,7 @@
           <i class="fi fi-brands-instagram"></i>
         </p>
       </div>
-      <div id="footer_update">
+      <div id="footer__update">
         <p>
           <small
             >Mis à jour le :
