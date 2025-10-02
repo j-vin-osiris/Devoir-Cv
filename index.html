@@ -3,235 +3,713 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="MON CV - Devoir CEF" />
-    <meta name="robots" content="index" />
-    <link rel="stylesheet" href="/css/style.css " />
-    <script
-      src="https://kit.fontawesome.com/d6fdc35641.js"
-      crossorigin="anonymous"
-    ></script>
-    <link href="/assets/logos/css/uicons-brands.css" rel="stylesheet" />
-    <!-- n'ayant pas trouvé le favicon que vous nous demandiez d'utiliser je me suis permit d'en mettre un autre -->
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="/assets/Favicon/icons8-cv-color-hand-drawn-32.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <title>CV BOETTO JEAN-VINCENT</title>
+    <title>Jean-Vincent Boetto - CV Narratif</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.3;
+        color: #2c3e50;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 10px;
+        font-size: 13px;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: white;
+        padding: 30px 25px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 0%,
+          transparent 70%
+        );
+        animation: rotate 20s linear infinite;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .header-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .name {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .title {
+        font-size: 1.2rem;
+        font-weight: 300;
+        opacity: 0.9;
+        margin-bottom: 15px;
+      }
+
+      .tagline {
+        font-size: 0.95rem;
+        max-width: 700px;
+        margin: 0 auto;
+        opacity: 0.95;
+        line-height: 1.4;
+      }
+
+      .content {
+        padding: 25px 25px;
+      }
+
+      .section {
+        margin-bottom: 25px;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+        color: #1e3c72;
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 20px;
+      }
+
+      .section-title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 25px;
+        background: linear-gradient(to bottom, #667eea, #764ba2);
+        border-radius: 2px;
+      }
+
+      .timeline {
+        position: relative;
+        padding-left: 20px;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, #667eea, #764ba2);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 20px;
+        padding: 15px 20px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -29px;
+        top: 15px;
+        width: 8px;
+        height: 8px;
+        background: #667eea;
+        border-radius: 50%;
+        border: 2px solid white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .item-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1e3c72;
+        margin-bottom: 5px;
+      }
+
+      .item-subtitle {
+        color: #666;
+        margin-bottom: 8px;
+        font-style: italic;
+        font-size: 0.9rem;
+      }
+
+      .item-content {
+        color: #555;
+        line-height: 1.4;
+        font-size: 0.9rem;
+      }
+
+      .item-content li {
+        margin-bottom: 4px;
+        position: relative;
+        padding-left: 15px;
+      }
+
+      .item-content li::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: #667eea;
+        font-weight: bold;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .skill-card {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .skill-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #667eea, #764ba2);
+      }
+
+      .card-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #1e3c72;
+        margin-bottom: 8px;
+      }
+
+      .card-content {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        color: #555;
+      }
+
+      .highlight-box {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 15px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .highlight-box::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 100%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 0%,
+          transparent 70%
+        );
+        animation: pulse 3s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1) rotate(0deg);
+        }
+        50% {
+          transform: scale(1.1) rotate(180deg);
+        }
+      }
+
+      .highlight-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .highlight-title {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      .highlight-text {
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+
+      .contact-info {
+        background: #1e3c72;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .icon {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+      }
+
+      /* Version condensée pour objectifs */
+      .objectives-compact {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+      }
+
+      .objective-card {
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 10px;
+        border-left: 4px solid #667eea;
+      }
+
+      .objective-title {
+        font-weight: 600;
+        color: #1e3c72;
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+      }
+
+      .objective-content {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        color: #555;
+      }
+
+      /* Styles d'impression */
+      @media print {
+        body {
+          background: white !important;
+          padding: 0 !important;
+          font-size: 11px !important;
+        }
+
+        .container {
+          box-shadow: none !important;
+          border-radius: 0 !important;
+          max-width: 100% !important;
+        }
+
+        .header {
+          padding: 20px 15px !important;
+        }
+
+        .content {
+          padding: 15px !important;
+        }
+
+        .section {
+          margin-bottom: 15px !important;
+        }
+
+        .timeline-item {
+          margin-bottom: 12px !important;
+          padding: 10px 15px !important;
+        }
+
+        .highlight-box {
+          padding: 15px !important;
+          margin: 10px 0 !important;
+        }
+
+        .contact-info {
+          padding: 15px !important;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          margin: 5px;
+          border-radius: 10px;
+        }
+
+        .header {
+          padding: 20px 15px;
+        }
+
+        .name {
+          font-size: 2rem;
+        }
+
+        .content {
+          padding: 20px 15px;
+        }
+
+        .skills-grid,
+        .objectives-compact {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-info {
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+    </style>
   </head>
-  <!-- le cv se divisera en 4 parties distinctes : le header / la collone de gauche / le corp centrale / le footer -->
   <body>
-    <!-- 1ere partie : header -->
-    <header>
-      <div id="header__photo">
-        <a href="assets/photos/JVB-PROFIL.jpg" target="_blank">
-          <img src="/assets/photos/JVB-PROFIL.jpg" alt="Jean-Vincent Boetto"
-        /></a>
+    <div class="container">
+      <div class="header">
+        <div class="header-content">
+          <h1 class="name">Jean-Vincent Boetto</h1>
+          <p class="title">Développeur Web & Manager Expérimenté</p>
+          <p class="tagline">
+            22 ans de leadership opérationnel + Formation tech en cours = Un
+            profil unique qui combine maturité managériale, créativité
+            artistique et passion pour le code
+          </p>
+        </div>
       </div>
-      <section id="header__information">
-        <div id="header__information__nom">
-          <h1>Jean-Vincent Boetto</h1>
-          <h2>Développeur Web et Web Mobile</h2>
-        </div>
-        <div id="header__information__icones">
-          <p>
-            <a href="mailto:jvboetto@gmail.com" target="_blank"
-              ><span class="fa-solid fa-envelope"></span> <span>Mail</span></a
-            >
-          </p>
-          <p>
-            <a href="https://maps.app.goo.gl/dMzJRV1jGdQz7kJL8" target="_blank"
-              ><span class="fa-solid fa-house"></span>
-              <span class="adresse">Adresse</span></a
-            >
-          </p>
-          <p>
-            <a href="tel:+33625244239">
-              <span class="fa-solid fa-phone"></span>
-              <span>Téléphone</span></a
-            >
-          </p>
-          <p>
-            <span class="fa-solid fa-car"></span>
-            <span>Permis B</span>
-          </p>
-        </div>
-      </section>
-    </header>
-    <main>
-      <!-- 2nde partie : collone de gauche -->
-      <section id="left__column">
-        <h3>Compétences</h3>
-        <div id="left__column__compétences">
-          <h4>HTML</h4>
-          <p>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-          </p>
-          <h4>CSS</h4>
-          <p>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-          </p>
-          <h4>Javascript</h4>
-          <p>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-          </p>
-          <h4>PHP</h4>
-          <p>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-          </p>
-        </div>
-        <!-- j'utilise la mêm class pour "qualité" et "langues" car ils ont la même mise en forme -->
-        <h3>Langues</h3>
-        <div id="left__column__langues">
-          <h4>Français</h4>
-          <p>Langue maternelle</p>
-          <h4>Anglais</h4>
-          <p>Couramment</p>
-          <h4>Espagnol</h4>
-          <p>Notions</p>
+
+      <div class="content">
+        <div class="section">
+          <h2 class="section-title">Mon Parcours : De la Route au Code</h2>
+          <div class="highlight-box">
+            <div class="highlight-content">
+              <p class="highlight-text">
+                Responsable d'exploitation en reconversion, j'ai gravi tous les
+                échelons du transport routier avant de me lancer dans ma
+                véritable passion : le développement web. Mon parcours atypique
+                combine leadership opérationnel, créativité artistique et
+                expertise technique en devenir.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <h3>Qualités</h3>
-        <div class="left__column__qualités">
-          <ul>
-            <li>Esprit d'équipe</li>
-            <li>Autonomie</li>
-            <li>Organisation</li>
-            <li>Créativité</li>
-          </ul>
-        </div>
-        <h3>Centre d'intéret</h3>
-        <div class="left__column__qualités">
-          <ul>
-            <li>Musique</li>
-            <li>Sport</li>
-            <li>Informatique</li>
-          </ul>
-        </div>
-      </section>
-      <!-- 3eme partie le corps centrale -->
-      <section id="main__content">
-        <h3>Profil</h3>
-        <div id="main__content__profil">
-          <p>
-            Cadre d'exploitation dans le domaine du transports routier, j'ai
-            obtenu mon attestation de capacité transport en 2006. Fort d'une
-            expérience de plus de 20 ans dans ce domaine, j'ai acquis mes
-            connaissances à travers les différents postes occupés comme celui de
-            responsable de quais, responsable de parc, assistant secrétariat,
-            cadre d'exploitation.
-          </p>
-          <p>
-            Devant l'opportunité d'engager une reconversion professionnelle,
-            j'ai choisis le secteur du numérique, ayant toujours été passionné
-            par l'informatique, internet et les nouvelles technologies.
-          </p>
-        </div>
-        <h3>Formations</h3>
-        <!-- concernant les parties du cv "formation" , "stage" et "expérience professionnelle" j'utilise des class identiques car ils ont tous la même mise en forme ce qui limitera le nombre de lignes css -->
-        <div class="main__content__formations">
-          <p>
-            <span class="titres">Titre Professionnel DWWM</span>
-            <span class="dates">2024/2025</span>
-            <span class="sous-titres"
-              ><small>Centre Européen de Formation</small></span
+        <div class="section">
+          <h2 class="section-title">Formation Tech & Compétences</h2>
+          <div class="highlight-box">
+            <div class="highlight-content">
+              <h3 class="highlight-title">
+                🎯 Titre Professionnel DWWM en cours
+              </h3>
+              <p class="highlight-text">
+                <strong>Objectif :</strong> Stage validation 10 semaines
+                (septembre 2025)
+              </p>
+            </div>
+          </div>
+
+          <div class="section" style="margin-bottom: 20px">
+            <h3
+              style="
+                color: #1e3c72;
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+                font-weight: 600;
+              "
             >
-          </p>
-
-          <p>
-            <span class="titres">BTS Transport</span>
-            <span class="dates">Septembre 2004 - Juillet 2006</span>
-            <span class="sous-titres"><small>ECF SUD, Vitrolles</small></span>
-          </p>
-          <p>
-            <span class="titres">Bacalauréat</span>
-            <span class="dates">2000</span>
-            <span class="sous-titres"
-              ><small>Lycée Georges Duby, Luynes</small></span
+              🚀 Projet Réalisé : "Trouve Ton Artisan"
+            </h3>
+            <div
+              style="
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                padding: 15px;
+                border-radius: 10px;
+                border-left: 4px solid #667eea;
+                margin-bottom: 15px;
+              "
             >
-          </p>
+              <div style="font-size: 0.9rem; line-height: 1.4; color: #555">
+                <strong
+                  >Plateforme de mise en relation particuliers/artisans
+                  qualifiés</strong
+                ><br />
+                <strong>🔗 Demo :</strong>
+                <a
+                  href="https://trouve-ton-artisan-x1vs.onrender.com/"
+                  target="_blank"
+                  style="color: #667eea"
+                  >trouve-ton-artisan-x1vs.onrender.com</a
+                >
+              </div>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                  gap: 10px;
+                  margin-top: 10px;
+                  font-size: 0.85rem;
+                "
+              >
+                <div>
+                  <strong>⚡ Full-stack :</strong> React.js + Express.js
+                </div>
+                <div>
+                  <strong>🎨 UX/UI :</strong> Figma, navigation intuitive
+                </div>
+                <div><strong>💾 Database :</strong> Système sécurisé</div>
+                <div>
+                  <strong>☁️ Deploy :</strong> Render, performance optimisée
+                </div>
+                <div>
+                  <strong>📊 Produit :</strong> Analyse besoins, recherche
+                  avancée
+                </div>
+                <div>
+                  <strong>⭐ Features :</strong> Profils artisans, avis clients
+                </div>
+              </div>
+            </div>
+
+            <h3
+              style="
+                color: #1e3c72;
+                font-size: 1rem;
+                margin-bottom: 8px;
+                font-weight: 600;
+                margin-top: 15px;
+              "
+            >
+              🌐 Site Vitrine WordPress
+            </h3>
+            <div
+              style="
+                background: #f8f9fa;
+                padding: 12px;
+                border-radius: 8px;
+                border-left: 3px solid #764ba2;
+                font-size: 0.85rem;
+                color: #555;
+              "
+            >
+              <strong>Création et personnalisation</strong> d'un site web
+              professionnel avec WordPress et Elementor. Gestion CMS, design
+              responsive, optimisation UX/UI pour une présentation visuelle
+              impactante.<br />
+              <strong>🔗 Site :</strong>
+              <a
+                href="https://madame-m.fr"
+                target="_blank"
+                style="color: #764ba2"
+                >madame-m.fr</a
+              >
+            </div>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-card">
+              <h3 class="card-title">🎨 Technologies Opérationnelles</h3>
+              <div class="card-content">
+                <strong>Front-end :</strong> HTML5/CSS3, Responsive<br />
+                <strong>Design :</strong> Figma, prototypage UX<br />
+                <strong>JavaScript :</strong> Bases solides<br />
+                <strong>React :</strong> Composants modernes
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <h3 class="card-title">🔧 En Construction</h3>
+              <div class="card-content">
+                <strong>Back-end :</strong> Node.js/Express<br />
+                <strong>Outils :</strong> Git, GitHub<br />
+                <strong>Méthodes :</strong> Agile, Scrum<br />
+                <strong>Architecture :</strong> Patterns web
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <h3 class="card-title">👑 Leadership</h3>
+              <div class="card-content">
+                22 ans progression continue, expertise managériale, fidélité et
+                capacité d'adaptation. Relation de confiance durable.
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <h3 class="card-title">🎵 Créativité</h3>
+              <div class="card-content">
+                Batteur OSIRIS (2021+), tournées France/international. Gestion
+                planning, équipe créative, performance sous pression.
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <h3 class="card-title">🌍 International</h3>
+              <div class="card-content">
+                Anglais C1, espagnol A2, expérience tournées internationales.
+                Atout projets tech globaux.
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <h3 class="card-title">✨ UX/UI</h3>
+              <div class="card-content">
+                Figma + sensibilité artistique = approche technique/créative
+                pour interfaces intuitives.
+              </div>
+            </div>
+          </div>
         </div>
 
-        <h3>Stages</h3>
-        <div class="main__content__formations">
-          <p>
-            <span class="titres">Agent de quais</span
-            ><span class="dates">Mars 2002 - Avril 2002</span>
-            <span class="sous-titres"><small>Sarl Boetto</small></span>
-          </p>
-          <p>
-            <span class="titres">Aide au personel roulant</span
-            ><span class="dates">Janvier 2001 - Fevrier 2001</span>
-            <span class="sous-titres"><small>Sarl Besson</small></span>
-          </p>
+        <div class="section">
+          <h2 class="section-title">
+            Mon Évolution Professionnelle - Sarl Boetto
+          </h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h3 class="item-title">Cadre d'Exploitation</h3>
+              <p class="item-subtitle">2006-2024 | 18 ans de Leadership</p>
+              <div class="item-content">
+                <strong>Management complet</strong> : Supervision quotidienne,
+                optimisation des processus, leadership collaboratif, solutions
+                innovantes pour problèmes logistiques complexes.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <h3 class="item-title">Secrétariat & Gestion de Parc</h3>
+              <p class="item-subtitle">
+                2004-2006 | Expertise Organisationnelle
+              </p>
+              <div class="item-content">
+                <strong>Administration stratégique</strong> : Coordination parc
+                roulant, tableaux de bord KPIs, optimisation maintenance,
+                conformité réglementaire 100%.
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <h3 class="item-title">Responsable de Quais</h3>
+              <p class="item-subtitle">2002-2004 | École du Management</p>
+              <div class="item-content">
+                <strong>Premier encadrement</strong> : Équipes 10+ personnes,
+                optimisation logistique, gestion des ressources, formation
+                leadership terrain.
+              </div>
+            </div>
+          </div>
         </div>
 
-        <h3>Expérience professionnelle</h3>
-        <div class="main__content__formations">
-          <p>
-            <span class="titres">Cadre d'exploitation</span
-            ><span class="dates">Octobre 2006 - Fevrier 2024</span>
-            <span class="sous-titres"><small>Sarl Boetto</small></span>
-          </p>
-          <p>
-            <span class="titres">Secrétariat et gestion de parc</span
-            ><span class="dates">Aout 2004 - Septembre 2006</span>
-            <span class="sous-titres"><small>Sarl Boetto</small></span>
-          </p>
-          <p>
-            <span class="titres">Responsable de quais</span
-            ><span class="dates">Aout 2002 - Juillet 2004</span>
-            <span class="sous-titres"><small>Sarl Boetto</small></span>
-          </p>
+        <div class="section">
+          <h2 class="section-title">
+            Mes Objectifs : De Stagiaire à Leader Tech
+          </h2>
+          <div class="objectives-compact">
+            <div class="objective-card">
+              <h3 class="objective-title">Phase 1 - Validation (Sept. 2025)</h3>
+              <div class="objective-content">
+                Stage 10 semaines développement web fullstack pour valider DWWM
+                et première expérience tech concrète.
+              </div>
+            </div>
+
+            <div class="objective-card">
+              <h3 class="objective-title">Phase 2 - Positionnement</h3>
+              <div class="objective-content">
+                <strong
+                  >Product Owner, Scrum Master, Chef projet digital, UX/UI
+                  Designer</strong
+                >
+                - Postes valorisant double compétence management/tech.
+              </div>
+            </div>
+
+            <div class="objective-card">
+              <h3 class="objective-title">Phase 3 - Vision Long Terme</h3>
+              <div class="objective-content">
+                Consultant/formateur transformation digitale secteurs
+                traditionnels (transport, logistique) via double culture
+                métier/tech.
+              </div>
+            </div>
+          </div>
+
+          <div class="highlight-box">
+            <div class="highlight-content">
+              <h3 class="highlight-title">💡 Ma Proposition de Valeur</h3>
+              <p class="highlight-text">
+                Un manager expérimenté qui comprend la tech,<br />
+                et souhaite combiner leadership et développement.
+              </p>
+            </div>
+          </div>
         </div>
-      </section>
-    </main>
-    <!-- derniere partie : le footer -->
-    <footer>
-      <!-- je n'ai volontairement pas linké les réseaux sociaux likedin et insta n'ayant pas de compte linkedin et mon compte instagram étant privé -->
-      <div id="footer__link">
-        <p>
-          <i class="fi fi-brands-linkedin"></i>
-        </p>
-        <p>
-          <a href="https://github.com/j-vin-osiris/Devoir-Cv" target="_blank">
-            <i class="fi fi-brands-github"></i
-          ></a>
-        </p>
-        <p>
-          <i class="fi fi-brands-instagram"></i>
-        </p>
       </div>
-      <div id="footer__update">
-        <p>
-          <small
-            >Mis à jour le :
-            <time datetime="2024-10-17">17-10-2024</time></small
-          >
-        </p>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path
+              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+            />
+          </svg>
+          jvboetto@gmail.com
+        </div>
+        <div class="contact-item">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path
+              d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+            />
+          </svg>
+          06 25 24 42 39
+        </div>
+        <div class="contact-item">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+            />
+          </svg>
+          Seillons-Sources-D'argens (83)
+        </div>
       </div>
-    </footer>
+    </div>
   </body>
 </html>
